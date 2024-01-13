@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto'
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         leading: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               color: Colors.black,
             )),
@@ -49,8 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               width: double.infinity,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(20),
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(30),
@@ -59,22 +59,22 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Find your',
                     style: TextStyle(fontSize: 25, color: Colors.black87),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Inspiration',
                     style: TextStyle(fontSize: 40, color: Colors.black,fontWeight: FontWeight.bold,),
                   ),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       color: Colors.grey,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         prefixIcon: Icon(
@@ -89,11 +89,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -101,38 +101,38 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Promo today',
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 15),
-                  Container(
+                  const SizedBox(height: 15),
+                  SizedBox(
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        promoCard('images/one.jfif'),
-                        promoCard('images/two.jfif'),
-                        promoCard('images/three.jfif'),
-                        promoCard('images/four.jfif'),
-                        promoCard('images/five.jfif'),
-                        promoCard('images/six.jfif'),
-                        promoCard('images/seven.jfif'),
+                        promoCard('assets/images/one.jpg'),
+                        promoCard('assets/images/two.jpg'),
+                        promoCard('assets/images/three.jpg'),
+                        promoCard('assets/images/four.jpg'),
+                        promoCard('assets/images/five.jpg'),
+                        promoCard('assets/images/six.jpg'),
+
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Container(
                     height: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.orange,
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage('images/three.jfif'),
+                        image: AssetImage('assets/images/three.jpg'),
 
                       ),
 
@@ -142,17 +142,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(20),
                         gradient: LinearGradient(
                           begin: Alignment.bottomRight,
-                          stops: [0.3,0.9],
+                          stops: const [0.3,0.9],
                           colors: [
                             Colors.black.withOpacity(.8),
                             Colors.black.withOpacity(.1),
                           ],
                         ),
                       ),
-                      child: Align(
+                      child: const Align(
                         alignment: Alignment.bottomLeft,
                         child: Padding(
-                          padding: const EdgeInsets.all(15.0),
+                          padding: EdgeInsets.all(15.0),
                           child: Text('Best Design',style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -176,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return AspectRatio(
       aspectRatio: 2.62 / 3,
       child: Container(
-        margin: EdgeInsets.only(right: 10),
+        margin: const EdgeInsets.only(right: 10),
         decoration: BoxDecoration(
           color: Colors.orange,
           borderRadius: BorderRadius.circular(20),
@@ -191,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
             borderRadius: BorderRadius.circular(20),
             gradient: LinearGradient(
               begin: Alignment.bottomRight,
-              stops: [0.1,0.9],
+              stops: const [0.1,0.9],
               colors: [
                 Colors.black.withOpacity(.8),
                 Colors.black.withOpacity(.1),
